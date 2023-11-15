@@ -26,4 +26,11 @@ public class WordleTest {
 		
 		assertEquals(List.of(NO,NO,NO,NO,NO), response);
 	}
+	
+	@Test
+	public void tallyForTargetFORndGuessFAVOR() {
+		Exception ex = assertThrows(RuntimeException.class, () -> tally("FOR", "FAVOR"));
+		System.out.println(ex);
+		assertEquals("Target size should be 5", ex.getMessage());
+	}
 }
